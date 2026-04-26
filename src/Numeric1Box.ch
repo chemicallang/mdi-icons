@@ -1,0 +1,5 @@
+public #universal Numeric1Box(props) {
+    return <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
+        <path d="M14,17H12V9H10V7H14M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z" />
+    </svg>
+}

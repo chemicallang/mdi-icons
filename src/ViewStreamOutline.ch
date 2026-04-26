@@ -1,0 +1,5 @@
+public #universal ViewStreamOutline(props) {
+    return <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
+        <path d="M4 6V18H21V6H4M19 16H6V13H19V16M6 11V8H19V11H6Z" />
+    </svg>
+}

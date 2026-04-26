@@ -1,0 +1,5 @@
+public #universal ViewGrid(props) {
+    return <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
+        <path d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3" />
+    </svg>
+}

@@ -1,0 +1,5 @@
+public #universal MinusThick(props) {
+    return <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
+        <path d="M20 14H4V10H20" />
+    </svg>
+}

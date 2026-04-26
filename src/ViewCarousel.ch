@@ -1,0 +1,5 @@
+public #universal ViewCarousel(props) {
+    return <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
+        <path d="M18,6V17H22V6M2,17H6V6H2M7,19H17V4H7V19Z" />
+    </svg>
+}
