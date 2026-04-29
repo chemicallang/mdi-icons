@@ -72,11 +72,12 @@ def generate_icons():
                     pascal_name = "Icon" + pascal_name
 
                 # Handle conflicting names
-                if pascal_name in conflicting_names:
-                    pascal_name = pascal_name + "Icon"
+                component_name = pascal_name
+                if component_name in conflicting_names:
+                    component_name = component_name + "Icon"
 
                 # Wrap in a new component
-                component_code = f"""public #universal {pascal_name}(props) {{
+                component_code = f"""public #universal {component_name}(props) {{
     return <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {{...props}}>
         {inner_content}
     </svg>
