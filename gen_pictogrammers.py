@@ -45,6 +45,8 @@ def generate_icons():
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
 
+    conflicting_names = { "Sleep" : True }
+
     print(f"Generating icon components from {base_svg_dir}...")
     
     count = 0
@@ -64,9 +66,14 @@ def generate_icons():
                 inner_content = re.sub(r' fill="[^"]*"', '', inner_content)
                 
                 pascal_name = to_pascal_case(icon_name)
+
                 # Handle names starting with numbers
                 if pascal_name[0].isdigit():
                     pascal_name = "Icon" + pascal_name
+
+                # Handle conflicting names
+                if pascal_name in conflicting_names:
+                    pascal_name = pascal_name + "Icon"
 
                 # Wrap in a new component
                 component_code = f"""public #universal {pascal_name}(props) {{
